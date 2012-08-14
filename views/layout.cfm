@@ -3,48 +3,115 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		#stylesheetLinkTag("columnal")#
-		#stylesheetLinkTag("custom")#
-		#stylesheetLinkTag("build")#
+		<meta charset="utf-8">
+	    <title>Grand Life | #pageTitle#</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+		#stylesheetLinkTag("bootstrap")#
+		#stylesheetLinkTag("bootstrap-responsive")#
+		#stylesheetLinkTag("responsiveslides, app")#
+		#stylesheetLinkTag("http://fonts.googleapis.com/css?family=Droid+Sans")#
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
 	</head>
 	<body>
-		<!--- Header --->
 		<header>
-			<h1 class="logo">Logo goes here</h1>
-			<div class="top-search">
-				#startFormTag(action="search")#
-				#endFormTag()#
-			</div>
-			<div class="signin">
-				#startFormTag(action="signin", id="signin")#
-					#textField(label="Email", objectName="user", property="email", placeholder="Enter Email", Autofocus="", required="")#
-					#passwordField(label="Password", objectName="user", property="password", placeholder="Enter Password", required="")#
-					#submitTag(value="Sign In")#
-				#endFormTag()#
-			</div>
+			#includePartial("/partials/nav")#
+			<section class="container">
+			<div class="content-inner">
+		    	<div class="logo">
+				  <h1 id="logo" class="pump-up">Grand life social trading site.</h1>
+				  <p>One light, one goal, one mind, unlimited possibilities!</p>
+				</div>
+					<!--- 
+					<cfif params.controller eq "home" and params.action eq "index">
+						#includePartial("/partials/topsearch")#
+					</cfif>
+					</div>
+					--->
+                    
+			</section>
 		</header>
 		
-		<!--- /Header --->
-		
-		<!--- Section: Main content --->
-		<section class="main">
-			<cfoutput>#includeContent()#</cfoutput>
+		<!--- Main content --->
+		<section class="container-fluid">
+			<div class="row-fluid">
+				<div class="span8" id="video-player">
+                <div class="callbacks_container">
+                	<ul id="slider1" class="rslides">
+                    	<li>
+                        	#imageTag("mockup.jpg")# 
+                            <p class="caption">This is a caption</p>
+                        </li>
+                        <li>
+                        	#imageTag("mock.jpg")# 
+                            <p class="caption">This is a caption</p>
+                        </li>
+                        <li>
+                        	#imageTag("mocku.jpg")# 
+                            <p class="caption">This is a caption</p>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+				
+                <div class="span4 well visible-desktop">
+					<h4>Side</h4>
+				</div>				
+			</div>
+            <div class="row-fluid">
+            	#includeContent()#
+            </div>
 		</section>
-		
-		<!--- /Section: Main content --->
-		
-		<!--- Aside: Trend --->
-		
-		<aside>
-			
-		</aside>
-		<!--- /Aside --->
-		
-		<!--- Footer --->
-		
-		<footer>
+		<footer class="container-fluid">
+			<div class="row visible-phone">
+				<div class="span3">#linkTo(action="login", text="Sign In")#</div>
+				<div class="span3">#linkTo(action="tos", Text="Terms")#</div>
+				<div class="span3">#linkTo(action="copyright", Text="&copy 2012 Grand Life")#</div>
+			</div>
+			<div class="row hidden-phone footer-nav">
+				<div class="span3 offset3">
+					<ul>
+						<li>About Us</li>
+						<li>Contact us</li>
+						<li>Help</li>
+						<li>#linkTo(text="#imageTag("footer.png")#", controller="home", action="index")#</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ul>
+						<li>Meet the team</li>
+						<li>Affiliate/Reseller program</li>
+						<li>Locate resellers</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ul>
+						<li>Follow us</li>
+						<li>Banks</li>
+					</ul>
+				</div>
+			</div>
 		</footer>
-		#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+		
+		<cfif get("environment") is "design">
+			#javascriptIncludeTag("jquery-1.7.2.min")#
+		<cfelse>
+			#javascriptIncludeTag("jquery-1.7.2.min")#
+			<!--- TODO: Uncomment for production release #javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")# --->
+		</cfif>
+		#javaScriptIncludeTag("bootstrap.min, responsiveslides.min, app")#
+		<script type="text/javascript">
+		  $(document).ready(function(){
+				$('input').hover(function()
+				{
+				$(this).popover('show')
+				});
+			});
+		  </script>	
 	</body>
 </html>
 </cfoutput>

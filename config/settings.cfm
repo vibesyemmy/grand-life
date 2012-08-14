@@ -7,7 +7,7 @@
 
 <!--- Datasource --->
 
-<cfset set(dataSourceName="grandlife")>
+<cfset set(dataSourceName="tstingtk_grand")>
 
 <cfset application.pluginManager.requirePassword = false>
 
@@ -16,5 +16,7 @@
 	The URLRewriting setting can bet set to "On", "Partial" or "Off".
 	To run with "Partial" rewriting, the "PATH_INFO" variable needs to be supported by the web server.
 	To run with rewriting "On", you need to apply the necessary rewrite rules on the web server first.
-	<cfset set(URLRewriting="Partial")>
+	
 --->
+
+<cfset set(URLRewriting="on")>

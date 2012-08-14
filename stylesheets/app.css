@@ -1,0 +1,264 @@
+body{
+	font-family: 'Droid Sans', sans-serif;
+}
+.content-inner{
+	position: relative;
+}
+.pump-up {
+color: #333;
+margin: 70px 22px 0;
+font-weight: bold;
+text-align: center;
+line-height: 40px;
+}
+
+.full-search-bar{
+	width:72%;
+	margin:0 auto 38px;
+	position:relative
+}
+.full-search-bar form{
+	padding:0;
+	margin:0;
+	position:relative;
+	overflow:hidden
+}
+.full-search-bar form .clearfix{margin:0}
+.full-search-bar form input[type=text]{
+	float:left;
+	height:30px;
+	font-size:20px;
+	line-height:24px;
+	-webkit-border-radius:6px 0 0 6px;
+	-moz-border-radius:6px 0 0 6px;
+	border-radius:6px 0 0 6px;
+	border-right:0;
+	width:95%;
+	margin-bottom:0
+}
+.full-search-bar form button[type=submit]{
+	position:absolute;
+	right:0;
+	top:0;
+	width:46px;
+	height:41px;
+	-webkit-border-radius:0 6px 6px 0;
+	-moz-border-radius:0 6px 6px 0;
+	border-radius:0 6px 6px 0}
+.full-search-bar .search-input-item{
+	padding:10px;
+	-webkit-border-radius:9px;
+	-moz-border-radius:9px;
+	border-radius:9px
+}
+.logo{
+	padding: 0 0 0 30%;
+}
+
+.logo p{
+	padding: 0 0 0 4%;
+	color: #1C4D0A;
+}
+#logo {
+  width: 320px;
+  height: 80px;
+  background: url(../images/logo.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.info{
+	
+}
+
+/*Video top*/
+
+#video-player{
+	padding:0 0 0 15%;
+	}
+.callbacks_container {
+  margin-bottom: 50px;
+  position: relative;
+  float: left;
+  width: 100%;
+  }
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.callbacks img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+  }
+
+.callbacks .caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  }
+
+.callbacks_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 52%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 4;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../images/themes/themes.gif") no-repeat left top;
+  margin-top: -45px;
+  }
+
+.callbacks_nav:active {
+  opacity: 1.0;
+  }
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }
+
+.cat h4{
+	text-align: center;
+}
+
+.profileImg img{
+	max-height: 150px;
+	max-width: 200px;
+}
+
+.icon32 {
+float: left;
+height: 34px;
+margin: 7px 8px 0 0;
+width: 36px;
+}
+
+.icon32{
+background-color: transparent;
+background-repeat: no-repeat;
+}
+
+.icon32.icon-post, #icon-edit, #icon-post, .icon32.icon-dashboard, #icon-index, .icon32.icon-media, #icon-upload, .icon32.icon-links, #icon-link-manager, #icon-link, #icon-link-category, .icon32.icon-page, #icon-edit-pages, #icon-page, .icon32.icon-comments, #icon-edit-comments, .icon32.icon-appearance, #icon-themes, .icon32.icon-plugins, #icon-plugins, .icon32.icon-users, #icon-users, #icon-profile, #icon-user-edit, .icon32.icon-tools, #icon-tools, #icon-admin, .icon32.icon-settings, #icon-options-general, .icon32.icon-site, #icon-ms-admin {
+background-image: url(../images/icons32.png);
+}
+
+.icon32.icon-users, #icon-users, #icon-profile, #icon-user-edit {
+background-position: -600px -5px;
+}
+
+/*Cat inner*/
+
+.cat-inner{
+	margin:0;
+	padding: 0 0 0 25%;
+}
+
+.gray{
+	background-color: #F1F1F1;
+}
+
+.dash{
+	height: 700px;
+}
+
+body {
+    padding-top: 0;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.sidebar-nav-fixed {
+    position:fixed;
+    top:243px;
+    width:21.97%;
+}
+
+footer {
+	background: #333;
+	min-height: 220px;
+}
+
+footer .hidden-phone{
+	padding: 20px 0;
+}
+
+footer li{
+	list-style: none;
+	color: #fff;
+}
+.footer-nav div:first-child{
+	position: relative;
+}
+.footer-nav div:first-child li:last-child{
+	position: absolute;
+	left: -305px;	
+	top:-32px;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        width:auto;
+    }
+    body {
+        padding-top: 0;
+    }
+    .logo{
+	padding: 0 0 0 7%;
+}
+
+footer{
+	background: #ffffff;
+}
+
+.footer-nav{
+	position: relative;
+}
+
+}
+
+@media (max-width: 979px) {
+    .sidebar-nav-fixed {
+        position:static;
+        width: auto;
+    }
+    body {
+        padding-top: 0;
+    }
+}
